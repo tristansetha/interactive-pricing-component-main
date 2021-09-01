@@ -17,7 +17,7 @@
   bottom: 0;
   background: url("../../images/bg-pattern.svg");
   background-repeat: no-repeat;
-  background-size: 350%;
+  // background-size: 350%;
 }
 
 /* HEADER */
@@ -46,8 +46,10 @@ header {
   }
 
   p {
+		margin-top: 0.75em;
     text-align: center;
-    font-size: 15px;
+    font-size: 0.65em;
+		line-height: 1.75em;
     color: map-get($colors, grayish-blue);
   }
 }
@@ -148,6 +150,13 @@ main {
     border: none;
     background: transparent;
   }
+	&::-webkit-slider-thumb:active {
+		background-color: map-get($colors, dark-desaturated-blue);
+		cursor: grabbing;
+
+	}
+
+
 }
 
 .rate-view-container {
@@ -160,12 +169,10 @@ main {
     font-weight: 800;
     font-size: 1.5em;
     color: map-get($colors, dark-desaturated-blue);
-    // border:1px solid black;
   }
   &__cycle {
     font-size: 0.55em;
     color: map-get($colors, grayish-blue);
-    // border:1px solid black;
   }
 }
 
@@ -253,7 +260,6 @@ main {
     justify-content: center;
     align-items: center;
     height: 58%;
-    // border: 1px solid black;
   }
 
   &__button-container {
@@ -261,7 +267,6 @@ main {
     justify-content: center;
     align-items: center;
     height: 42%;
-    // border: 1px solid black;
     button {
       width: 150px;
       height: 35px;
@@ -282,37 +287,31 @@ main {
 }
 
 @media screen and (min-width: map-get($breakpoints, desktop)) {
+	header {
+		br {
+			display: none;
+		}
+	}
   .background {
-    background-color: green;
+		background-size: contain;
   }
   .card {
     height: 398px;
     width: 541px;
-    // border: 10px solid pink;
     &__elements-1 {
       height: 45%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      // border: 2px solid purple;
     }
 
     &__elements-2 {
       height: 55%;
-      // border: 2px solid purple;
     }
   }
-
-  // .card-elements-1 {
-  //   height: 45%;
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   border: 2px solid purple;
-  // }
   .pageview-container {
 		justify-content: center;
     height: 99px;
     order: 1;
-    // border: 2px solid purple;
 		padding-bottom: 12px;
   }
   .rate-view-container {
@@ -321,37 +320,24 @@ main {
     height: 99px;
     order: 2;
 		&__price {
-
-			// border:1px solid black;
 		}
 		&__cycle {
-
-			// border:1px solid black;
 			margin-bottom: 12px;
 		}
-    // border: 2px solid purple;
   }
   .slider-container {
-
     height: 83px;
     grid-column: span 2;
     order: 3;
-    // border: 2px solid purple;
   }
-  // .card-elements-2 {
-  //   height: 55%;
-  //   border: 2px solid purple;
-  // }
 
   .rate-type-container {
 		padding-left: 90px;
-    // border: 2px solid purple;
 		&__discount {
 			height: 15px;
 			width: 79px;
-			word-spacing: 15px;
 
-			margin-left: 18px;
+			margin-left: 1em;
 			span {
 				text-align: right;
 				display: inline;
@@ -377,10 +363,4 @@ main {
 		}
 	}
 
-  .description-container {
-    // border: 2px solid purple;
-  }
-  .button-container {
-    // border: 2px solid purple;
-  }
 }
