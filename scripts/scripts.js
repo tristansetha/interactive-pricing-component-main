@@ -7,7 +7,7 @@ sliderInput.addEventListener('input', handleInputChange)
 
 
 function handleInputChange(e) {
-	// console.log(e.target)
+	// console.log(e.target.value)
 	let target = e.target
 	if (e.target.type !== 'range') {
 		target = document.getElementById('range')

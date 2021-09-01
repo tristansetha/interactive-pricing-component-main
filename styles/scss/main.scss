@@ -48,8 +48,7 @@ header {
   p {
     text-align: center;
     font-size: 15px;
-		color: map-get($colors, grayish-blue) 
-
+    color: map-get($colors, grayish-blue);
   }
 }
 
@@ -81,11 +80,11 @@ main {
   box-shadow: 0 10px 500px map-get($colors, light-grayish-blue);
   border-radius: 10px;
 
-  #{&}__elements-1 {
+  &__elements-1 {
     height: 40%;
   }
 
-  #{&}__elements-2 {
+  &__elements-2 {
     height: 60%;
     width: 100%;
   }
@@ -99,9 +98,9 @@ main {
   align-items: flex-end;
   height: 31%;
   width: 100%;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 0.59em;
+  font-weight: 700;
+  letter-spacing: 2px;
   color: map-get($colors, grayish-blue);
 }
 
@@ -113,96 +112,198 @@ main {
   align-items: center;
   height: 40%;
 }
-
-@mixin track() {
-  /* common styles */
-}
-
 #slider {
   width: 80%;
+  font-size: 1em;
+  -webkit-appearance: none;
+  margin-right: 15px;
+  // width: 200px;
+  height: 10%;
+  background: map-get($colors, lighter-grayish-blue);
+  border-radius: 5px;
+  background-image: linear-gradient(
+    map-get($colors, soft-cyan),
+    map-get($colors, soft-cyan)
+  );
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 1.75em;
+    width: 1.75em;
+    border-radius: 50%;
+    background: url("../../images/icon-slider.svg");
+    background-color: map-get($colors, strong-cyan);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 10px 30px 0 map-get($colors, strong-cyan);
+    transition: background 0.3s ease-in-out;
+  }
   &::-webkit-slider-runnable-track {
-    @include track;
-  }
-  &::-moz-range-track {
-    @include track;
-  }
-  &::-ms-track {
-    @include track;
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 }
 
-// #slider {
-//   -webkit-appearance: none;
-//   margin-right: 15px;
-//   width: 200px;
-//   height: 7px;
-//   background: rgba(255, 255, 255, 0.6);
-//   border-radius: 5px;
-//   background-image: linear-gradient(map-get($colors, soft-cyan), map-get($colors, soft-cyan));
-//   background-size: 70% 100%;
-//   background-repeat: no-repeat;
-// }
-
-// #slider::-webkit-slider-thumb {
-//   -webkit-appearance: none;
-//   height: 20px;
-//   width: 20px;
-//   border-radius: 50%;
-//   background: map-get($colors, strong-cyan);
-// 	cursor: pointer;
-//   /* cursor: ew-resize;
-//   box-shadow: 0 0 2px 0 #555;
-//   transition: background .3s ease-in-out; */
-// }
-
-// #slider::-webkit-slider-runnable-track  {
-//   -webkit-appearance: none;
-//   box-shadow: none;
-//   border: none;
-//   background: transparent;
-// }
-
-// #slider::-moz-range-track {
-
-// }
-// #slider::-ms-track {
-
-// }
-
 .rate-view-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 29%;
+  gap: 12px;
+  &__price {
+    font-weight: 800;
+    font-size: 1.5em;
+    color: map-get($colors, dark-desaturated-blue);
+    // border:1px solid black;
+  }
+  &__cycle {
+    font-size: 0.55em;
+    color: map-get($colors, grayish-blue);
+    // border:1px solid black;
+  }
 }
 
 /* CARD ELEMENTS 2 */
 
 .rate-type-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 30%;
+  // border: 1px solid black;
+  &__label {
+    font-size: 11px;
+    margin: 5px;
+    color: map-get($colors, grayish-blue);
+  }
+
+  &__discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 37px;
+    border-radius: 15px;
+
+    color: map-get($colors, light-red);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 60;
+    background-color: map-get($colors, light-grayish-red);
+  }
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: map-get($colors, light-grayish-blue);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  label:after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  label:active:after {
+    width: 32px;
+  }
+  #switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+
+  #switch:checked + label {
+    background: map-get($colors, strong-cyan);
+  }
+
+  #switch:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-90%);
+  }
 }
 
 .footer-container {
+  display: flex;
+  flex-direction: column;
   height: 70%;
+  &__description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 58%;
+    // border: 1px solid black;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42%;
+    // border: 1px solid black;
+    button {
+      width: 150px;
+      height: 35px;
+      border-radius: 25px;
+      border: none;
+      color: map-get($colors, pale-blue);
+      background-color: map-get($colors, dark-desaturated-blue);
+      font-size: 0.55em;
+      cursor: pointer;
+    }
+  }
 }
 
-.description-container {
-  height: 58%;
+.description-text {
+  font-size: 11px;
+  margin-left: 12px;
+  color: map-get($colors, grayish-blue);
 }
 
-.button-container {
-  height: 42%;
-}
-
-@media (min-width: 1440px) {
+@media screen and (min-width: map-get($breakpoints, desktop)) {
+  .background {
+    background-color: green;
+  }
   .card {
     height: 398px;
     width: 541px;
+    border: 10px solid pink;
+    #{&}__elements-1 {
+      height: 45%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border: 2px solid purple;
+    }
+
+    #{&}__elements-2 {
+      height: 55%;
+      border: 2px solid purple;
+    }
   }
 
-  .card-elements-1 {
-    height: 45%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 2px solid purple;
-  }
+  // .card-elements-1 {
+  //   height: 45%;
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   border: 2px solid purple;
+  // }
   .pageview-container {
     height: 99px;
     order: 1;
@@ -219,10 +320,10 @@ main {
     order: 3;
     border: 2px solid purple;
   }
-  .card-elements-2 {
-    height: 55%;
-    border: 2px solid purple;
-  }
+  // .card-elements-2 {
+  //   height: 55%;
+  //   border: 2px solid purple;
+  // }
 
   .rate-type-container {
     border: 2px solid purple;
