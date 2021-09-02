@@ -17,7 +17,6 @@
   bottom: 0;
   background: url("../../images/bg-pattern.svg");
   background-repeat: no-repeat;
-  // background-size: 350%;
 }
 
 /* HEADER */
@@ -37,7 +36,6 @@ header {
   background: url("../../images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center;
-  /* border:5px solid black; */
 
   h1 {
     text-align: center;
@@ -57,20 +55,15 @@ header {
 /* MAIN */
 
 main {
-  /* Positioning */
   position: absolute;
   top: 29%;
   left: 0;
   right: 0;
   bottom: 0;
-  /* Display and Box Model */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* Color */
-  /* Text */
-  /* Other */
 }
 
 // CARD AND SECTIONS (CARD_ELEMENTS)
@@ -119,7 +112,6 @@ main {
   font-size: 1em;
   -webkit-appearance: none;
   margin-right: 15px;
-  // width: 200px;
   height: 10%;
   background: map-get($colors, lighter-grayish-blue);
   border-radius: 5px;
@@ -183,7 +175,6 @@ main {
   justify-content: center;
   align-items: center;
   height: 30%;
-  // border: 1px solid black;
   &__label {
     font-size: 11px;
     margin: 5px;
