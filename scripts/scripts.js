@@ -38,7 +38,6 @@ function handleInputChange(e) {
 }
 
 function handleRate(e) {
-	console.log(e.target.checked)
 	yearlyBilling = e.target.checked
 	handleRateRender()
 }
