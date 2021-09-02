@@ -93,10 +93,13 @@ main {
   align-items: flex-end;
   height: 31%;
   width: 100%;
-  font-size: 0.59em;
   font-weight: 700;
   letter-spacing: 2px;
   color: map-get($colors, grayish-blue);
+
+}
+h2 {
+	font-size: 0.60em;
 }
 
 // SLIDER
