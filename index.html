@@ -2,79 +2,79 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-	<title>Frontend Mentor | Interactive pricing component</title>
+  <title>Frontend Mentor | Interactive pricing component</title>
 
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="styles/css/main.min.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/css/main.min.css">
 
 </head>
 
 <body>
-	<div class="background">
-		<header>
-			<h1 class="header-heading">Simple, traffic-based pricing</h1>
-			<div>
-				<p> Sign-up for our 30-day trial. <br>No credit card required.</p>
-			</div>
-		</header>
-		<main>
-			<section class="card">
-				<div class="card__elements-1">
-					<div class="pageview-container">
-						<h2 id="pageviews">100k PAGEVIEWS</h2>
-					</div>
-					<div class="slider-container">
-						<label for="slider"></label>
-						<input value="50" type="range" min="0" max="100" step=25 id="slider" />
-					</div>
-					<div class="rate-view-container">
-						<div id="ratePrice" class="rate-view-container__price">$16.00</div>
-						<div id="rateCycle" class="rate-view-container__cycle">/ month</div>
-					</div>
-				</div>
-				<div class="card__elements-2">
+  <div class="background">
+    <header>
+      <h1 class="header-heading">Simple, traffic-based pricing</h1>
+      <div>
+        <p> Sign-up for our 30-day trial. <br>No credit card required.</p>
+      </div>
+    </header>
+    <main>
+      <section class="card">
+        <div class="card__elements-1">
+          <div class="pageview-container">
+            <h2 id="pageviews">100k PAGEVIEWS</h2>
+          </div>
+          <div class="slider-container">
+            <label for="slider"></label>
+            <input value="50" type="range" min="0" max="100" step=25 id="slider" />
+          </div>
+          <div class="rate-view-container">
+            <div id="ratePrice" class="rate-view-container__price">$16.00</div>
+            <div id="rateCycle" class="rate-view-container__cycle">/ month</div>
+          </div>
+        </div>
+        <div class="card__elements-2">
 
-					<div class="rate-type-container">
-						<p class="rate-type-container__label">Monthly Billing</p>
-						<input type="checkbox" id="switch" /><label class="rate-type-container__label" for="switch">Toggle</label>
-						<p class="rate-type-container__label">Yearly Billing</p>
-						<div class="rate-type-container__discount">
-							<div id="discount-dash">- </div>25%<span>discount</span>
-						</div>
-					</div>
-					<div class="footer-container">
-						<div class="footer-container__description-container">
-							<div>
-								<p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">Unlimited
-										websites</span></p>
-							</div>
-							<div>
-								<p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">100% data
-										ownership</span></p>
-							</div>
-							<div>
-								<p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">Email reports</span>
-								</p>
-							</div>
-						</div>
-						<div class="footer-container__button-container"><button class="start-button">Start my trial</button></div>
-					</div>
-				</div>
-			</section>
+          <div class="rate-type-container">
+            <p class="rate-type-container__label">Monthly Billing</p>
+            <input type="checkbox" id="switch" /><label class="rate-type-container__label" for="switch">Toggle</label>
+            <p class="rate-type-container__label">Yearly Billing</p>
+            <div class="rate-type-container__discount">
+              <div id="discount-dash">- </div>25%<span>discount</span>
+            </div>
+          </div>
+          <div class="footer-container">
+            <div class="footer-container__description-container">
+              <div>
+                <p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">Unlimited
+                    websites</span></p>
+              </div>
+              <div>
+                <p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">100% data
+                    ownership</span></p>
+              </div>
+              <div>
+                <p><img src="images/icon-check.svg" alt="icon-check"><span class="description-text">Email reports</span>
+                </p>
+              </div>
+            </div>
+            <div class="footer-container__button-container"><button class="start-button">Start my trial</button></div>
+          </div>
+        </div>
+      </section>
 
-		</main>
-	</div>
+    </main>
+  </div>
 
-	<!-- 
+  <!-- 
 	Sign-up for our 30-day trial. No credit card required.
 
 	Pageviews
@@ -89,7 +89,7 @@
 
 	Start my trial -->
 
-	<script src="scripts/scripts.js"></script>
+  <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

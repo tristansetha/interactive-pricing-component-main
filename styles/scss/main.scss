@@ -44,10 +44,10 @@ header {
   }
 
   p {
-		margin-top: 0.75em;
+    margin-top: 0.75em;
     text-align: center;
     font-size: 0.65em;
-		line-height: 1.75em;
+    line-height: 1.75em;
     color: map-get($colors, grayish-blue);
   }
 }
@@ -96,10 +96,9 @@ main {
   font-weight: 700;
   letter-spacing: 2px;
   color: map-get($colors, grayish-blue);
-
 }
 h2 {
-	font-size: 0.60em;
+  font-size: 0.6em;
 }
 
 // SLIDER
@@ -145,13 +144,10 @@ h2 {
     border: none;
     background: transparent;
   }
-	&::-webkit-slider-thumb:active {
-		background-color: map-get($colors, dark-desaturated-blue);
-		cursor: grabbing;
-
-	}
-
-
+  &::-webkit-slider-thumb:active {
+    background-color: map-get($colors, dark-desaturated-blue);
+    cursor: grabbing;
+  }
 }
 
 .rate-view-container {
@@ -197,9 +193,9 @@ h2 {
     font-size: 10px;
     font-weight: 60;
     background-color: map-get($colors, light-grayish-red);
-		span {
-			display: none;
-		}
+    span {
+      display: none;
+    }
   }
   label {
     cursor: pointer;
@@ -247,7 +243,7 @@ h2 {
   display: flex;
   flex-direction: column;
   height: 70%;
-	border-top: 1px solid map-get($colors, lighter-grayish-blue);
+  border-top: 1px solid map-get($colors, lighter-grayish-blue);
   &__description-container {
     display: flex;
     flex-direction: column;
@@ -281,13 +277,13 @@ h2 {
 }
 
 @media screen and (min-width: map-get($breakpoints, desktop)) {
-	header {
-		br {
-			display: none;
-		}
-	}
+  header {
+    br {
+      display: none;
+    }
+  }
   .background {
-		background-size: contain;
+    background-size: contain;
   }
   .card {
     height: 398px;
@@ -303,21 +299,21 @@ h2 {
     }
   }
   .pageview-container {
-		justify-content: center;
+    justify-content: center;
     height: 99px;
     order: 1;
-		padding-bottom: 12px;
+    padding-bottom: 12px;
   }
   .rate-view-container {
-		display: flex;
-		align-items: flex-end;
+    display: flex;
+    align-items: flex-end;
     height: 99px;
     order: 2;
-		&__price {
-		}
-		&__cycle {
-			margin-bottom: 12px;
-		}
+    &__price {
+    }
+    &__cycle {
+      margin-bottom: 12px;
+    }
   }
   .slider-container {
     height: 83px;
@@ -326,35 +322,34 @@ h2 {
   }
 
   .rate-type-container {
-		padding-left: 90px;
-		&__discount {
-			height: 15px;
-			width: 79px;
+    padding-left: 90px;
+    &__discount {
+      height: 15px;
+      width: 79px;
 
-			margin-left: 1em;
-			span {
-				text-align: right;
-				display: inline;
-			}
-		}
+      margin-left: 1em;
+      span {
+        text-align: right;
+        display: inline;
+      }
+    }
 
-		#discount-dash {
-			display: none;
-		}
+    #discount-dash {
+      display: none;
+    }
   }
 
-	.footer-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		gap: 30px;
-		&__description-container {
-			align-items: flex-start;
-			height: 100%;
-		}
-		&__button-container {
-			height: 100%;
-		}
-	}
-
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+    &__description-container {
+      align-items: flex-start;
+      height: 100%;
+    }
+    &__button-container {
+      height: 100%;
+    }
+  }
 }
