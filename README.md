@@ -20,7 +20,7 @@ mobile (iphone x)        |  desktop 1440
 
 ### Links
 
-- Solution URL: [Live Site](https://ttttristan.github.io/interactive-pricing-component-main)
+- Solution URL: [Live Site](https://tristansetha.github.io/interactive-pricing-component-main)
 
 ## My process
 
